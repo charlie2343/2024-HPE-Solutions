@@ -15,9 +15,9 @@ with open("input.txt") as f:
     for stock in stocks: 
         if stocks[stock] == max: 
             print(f"Trending: {stock} [{stocks[stock]} count]")
-            stocks.pop(stock)
-        break
-            
+            stocks[stock] = 0
+        
+    max = 0
     for stock in stocks: 
         count = stocks[stock]
         if count > max: 
